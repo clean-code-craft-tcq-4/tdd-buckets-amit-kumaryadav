@@ -25,8 +25,7 @@ public class ChargingRange {
 
     public  void printCSVFormat(Map<String, Integer> input) {
         System.out.println("Range, Readings");
-        input.forEach((k, v) -> {
-            System.out.println(k + ", " + v);
-        });
+        for (Map.Entry<String,Integer> entry : input.entrySet())
+            System.out.println(entry.getKey() + ", " + entry.getValue());
     }
 }
